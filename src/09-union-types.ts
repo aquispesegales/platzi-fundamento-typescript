@@ -5,7 +5,7 @@
 
     function greeting(myText:string|number){
         if(typeof myText === 'string'){
-            console.log(`string ${myText}`)
+            console.log(cstring ${myText}`)
         }else{
             console.log(`number ${myText}`)
         }
