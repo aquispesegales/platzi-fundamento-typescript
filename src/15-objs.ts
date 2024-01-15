@@ -1,23 +1,18 @@
 (()=>{
-    const login = (data:{email:string, password:string}) =>{
-        console.log(data.email,data.password);
-    }
-    login({
-        email:"correo",
-        password:"contraseña"
-    });
 
     type Sizes = 'S'|'M'|'L'|'XL';
-
-    const products: any[] = [];
-
-    const addProduct = (data:{
+    type Product = {
         title:string,
         createdAt:Date,
         stock:number,
         size?:Sizes
-    })=>{
-        products.push(addProduct)
+    }
+
+    const products: Product[] = [];
+    
+
+    const addProduct = (data:Product)=>{
+        products.push(data)
     }
 
     addProduct({
@@ -26,6 +21,20 @@
         stock:12
     });
 
-    console.log(products)
+    addProduct({
+        title:'prod 2',
+        createdAt: new Date(1993,1,1),
+        stock:12,
+        size:'XL'
+    });
+
+    console.log(products);
+    products.push({
+        title:'prod 3',
+        createdAt:new Date(1993,1,1),
+        stock:13,
+        size:'L'
+    })
+  
 
 })();
